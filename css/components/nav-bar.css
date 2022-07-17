@@ -6,6 +6,7 @@
   padding: 20px 40px;
   box-sizing: border-box;
   border-top: 1px solid rgba(125, 125, 125, 0.3);
+  
 }
 
 .nav_li { 
@@ -18,8 +19,53 @@
   color: #2e363e;
 }
 
+@keyframes noani {
+  0%{
+    transform: none;
+  }
+  50%{
+    transform: translateY(-5px) rotateY(180deg);
+  } 
+  100%{
+    transform: none;
+  } 
+}
+
 .nav_notification {
   position: absolute;
   left: 17px;
   bottom: 17px;
+  animation: noani 2s ease-in-out infinite;
+}
+
+@keyframes btnup {
+  from{
+    transform: translateY(50px);
+    opacity: 0;  
+  }
+  to{
+    opacity: 1;
+    transform: none;
+
+  }
+}
+
+
+.nav_btn {
+  transform: translateY(50px);
+  opacity: 0;
+  animation: btnup 0.3s ease-in-out forwards;
+
+}
+
+
+.nav_btn:nth-child(2){
+  animation-delay: 0.3s;
+}
+.nav_btn:nth-child(3){
+  animation-delay: 0.6s;
+
+}
+.nav_btn:nth-child(4){
+  animation-delay: 0.9s;
 }
